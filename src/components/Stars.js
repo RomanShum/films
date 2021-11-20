@@ -1,5 +1,6 @@
 import { v1 as uuidv1 } from "uuid";
 import Star from "./Star";
+import PropTypes from "prop-types";
 
 function Stars({ count }) {
   if (count < 1 || count > 5 || !Number.isInteger(count)) {
@@ -15,6 +16,10 @@ function Stars({ count }) {
 
 Stars.defaultProps = {
   count: 0,
+};
+
+Stars.propTypes = {
+  count: PropTypes.number,
 };
 
 export default Stars;
